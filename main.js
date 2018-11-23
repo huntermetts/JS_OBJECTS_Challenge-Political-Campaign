@@ -1,5 +1,5 @@
 // Creating Jim Cooper as an object
-const jCooper = {
+var jCooper = {
     congressional_district: "Tennessee's 5th District",
     platform_statements: {
         taxes: "In support of reducing defense spending in order to balance the budget.",
@@ -16,7 +16,7 @@ const jCooper = {
 
     events:"No upcoming events",
 
-    volenteerInfo: {
+    volunteerInfo: {
         name:"Hunter",
         address:"123 ABC Ave",
         email:"123@abc.com",
@@ -36,8 +36,49 @@ const jCooper = {
     mission: "I work for you. As your representative in Congress, it's my job to make sure your voice is heard.",
 
     vote:"https://ovr.govote.tn.gov/"
-}
+};
 
 // Testing that the object/properties work
-console.log(jCooper.volenteerInfo.name);
+console.log(jCooper.volunteerInfo.name);
 console.log(jCooper.mission);
+
+
+
+
+
+
+
+
+// Attempting the advanced challenge below
+function changeDistrict(){
+    jCooper.congressional_district = "Tennessee's 9th District,"
+    console.log(jCooper.congressional_district);
+};
+
+changeDistrict();
+// Function above works, changes Jim Cooper's congressional district to the '9th' district
+
+
+
+// Attempting to change all volunteer info with a function
+function changeVolInfo (name, address, email, phone, availability, activities){
+    jCooper.volunteerInfo = (name + address + email + phone + availability + activities);
+    console.log(jCooper.volunteerInfo); 
+};
+
+changeVolInfo("Bill ", "456 Testing Ave ", "testing@testing.com ", "615-615-6156 ", "Mondays and Tuesdays ", "Answering phone calls");
+// Function above works, changes all volunteer info
+
+
+// Attempt to add images to 'image' parameter below
+function addImg (image) {
+    jCooper.images.headshot2 = (image);
+    console.log(jCooper.images.headshot2)
+};
+
+addImg("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jim_Cooper.jpg/220px-Jim_Cooper.jpg");
+// Function above works, adds headshot2 img url to 'image' parameter
+
+
+console.log(jCooper);
+// Advanced 'MVP' met
